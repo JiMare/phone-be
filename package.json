@@ -6,7 +6,12 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "logs:prod": "flyctl logs",
+    "build:ui": "rm -rf build && cd phone-book && npm run build && cp -r build ../build ",
+    "deploy": "flyctl deploy --remote-only",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "debugger": "node --inspect index.js"
   },
   "author": "JitkaM",
   "license": "ISC",

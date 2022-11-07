@@ -17,4 +17,4 @@ jobs:
       - name: Fly setup
         uses: superfly/flyctl-actions/setup-flyctl@master  
       - name: Deploy
-        run: flyctl deploy --remote-only         
+        run: npm run deploy    
