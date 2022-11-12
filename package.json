@@ -11,7 +11,8 @@
     "build:ui": "rm -rf build && cd phone-book && npm run build && cp -r build ../build ",
     "deploy": "flyctl deploy --remote-only",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "debugger": "node --inspect index.js"
+    "debugger": "node --inspect index.js",
+    "lint": "eslint ."
   },
   "author": "JitkaM",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.27.0",
     "nodemon": "^2.0.20"
   }
 }
